@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2021_11_08_182047) do
     t.string "title"
     t.string "price"
     t.string "status"
-    t.string "frequncy"
+    t.string "frequency"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
