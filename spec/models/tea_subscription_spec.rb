@@ -9,7 +9,7 @@ RSpec.describe TeaSubscription do
   describe 'instantiation' do
     it 'exists and has attributes' do
       tea = Tea.create(title: 'Green Tea', description: 'Tastes Green', temperature: '165F', brew_time: '3 Minutes')
-      subscription = Subscription.create(title: '2 Teas', price: '$30', status: 'subscribed', frequency: 'once a month')
+      subscription = Subscription.create(title: '2 Teas', price: '$30', status: 0, frequency: 1)
 
       option_1 = TeaSubscription.create(tea: tea, subscription: subscription)
 
