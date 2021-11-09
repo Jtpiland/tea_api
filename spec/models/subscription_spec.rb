@@ -17,13 +17,13 @@ RSpec.describe Subscription do
 
   describe 'instatniation' do
     it 'exists and has attributes' do
-      subscription = Subscription.create(title: '2 Teas', price: '$30', status: 'subscribed', frequency: 'once a month')
+      subscription = Subscription.create(title: '2 Teas', price: '$30', status: 0, frequency: 1)
 
       expect(subscription).to be_a(Subscription)
       expect(subscription.title).to eq('2 Teas')
       expect(subscription.price).to eq('$30')
       expect(subscription.status).to eq('subscribed')
-      expect(subscription.frequency).to eq('once a month')
+      expect(subscription.frequency).to eq('monthly')
     end
   end
 end
