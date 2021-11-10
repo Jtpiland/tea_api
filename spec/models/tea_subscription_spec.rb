@@ -15,7 +15,5 @@ RSpec.describe TeaSubscription do
 
       expect(option_1).to be_a(TeaSubscription)
     end
-
   end
-
 end
