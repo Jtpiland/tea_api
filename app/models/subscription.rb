@@ -4,7 +4,7 @@ class Subscription < ApplicationRecord
   has_many :tea_subscriptions
   has_many :teas, through: :tea_subscriptions
 
-  enum status: [:subscribed, :cancelled]
+  enum status: [:subscribed, :out_of_stock]
   enum frequency: [:weekly, :monthly, :yearly]
 
   validates :title, presence: true
