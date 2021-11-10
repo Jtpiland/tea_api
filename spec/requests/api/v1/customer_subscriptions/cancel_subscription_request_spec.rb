@@ -10,12 +10,9 @@ RSpec.describe 'Cancel subsciption to customer request' do
 
       patch "/api/v1/customers/#{customer.id}/customer_subscriptions/#{customer_subscription.id}", params: { customer_id: customer.id, subscription_id: subscription.id, status: 'cancelled' }
 
-      expect(response.status).to eq(204)
+      expect(response.status).to eq(200)
       expect(CustomerSubscription.count).to eq(1)
-      expect(customer.subscriptions.first.title).to eq('2 Teas')
-      expect(customer.subscriptions.first.price).to eq('$30')
-      expect(customer.subscriptions.first.status).to eq('cancelled')
-      expect(customer.subscriptions.first.frequency).to eq('monthly')
+      expect(CustomerSubscription.first.status).to eq('cancelled')
     end
   end
 end
