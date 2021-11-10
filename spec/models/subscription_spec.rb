@@ -22,7 +22,7 @@ RSpec.describe Subscription do
       expect(subscription).to be_a(Subscription)
       expect(subscription.title).to eq('2 Teas')
       expect(subscription.price).to eq('$30')
-      expect(subscription.status).to eq('subscribed')
+      expect(subscription.status).to eq('available')
       expect(subscription.frequency).to eq('monthly')
     end
   end
