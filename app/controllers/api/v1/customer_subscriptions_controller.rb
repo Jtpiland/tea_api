@@ -3,6 +3,7 @@ class Api::V1::CustomerSubscriptionsController < ApplicationController
   def create
     customer_subscription = CustomerSubscription.create(customer_subscription_params)
     subscription = Subscription.where('id = ?', params[:subscription_id])
+
     render json: SubscriptionSerializer.new(subscription)
   end
 
