@@ -31,16 +31,6 @@ RSpec.describe "Customer's Subscription Index" do
       expect(subscription[:attributes][:subscription]).to have_key(:price)
       expect(subscription[:attributes][:subscription]).to have_key(:status)
       expect(subscription[:attributes][:subscription]).to have_key(:frequency)
-
-
-
-
-
-
-
-
-
-
     end
   end
 end

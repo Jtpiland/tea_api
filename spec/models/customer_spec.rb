@@ -23,7 +23,5 @@ RSpec.describe Customer do
       expect(customer.email).to eq('john@apple.com')
       expect(customer.address).to eq('123 St. Big Apple, NY')
     end
-
   end
-
 end
